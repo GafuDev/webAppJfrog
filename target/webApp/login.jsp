@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>LOGIN</title>
 </head>
 <body>
     <form action="login" method="post">

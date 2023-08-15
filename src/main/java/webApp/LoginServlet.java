@@ -1,4 +1,4 @@
-package webApp.servlets;
+package webApp;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import webApp.util.DbConnection;
-
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,16 +22,16 @@ public class LoginServlet extends HttpServlet {
 
         Connection connection = DbConnection.getConnection();
         try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM usuarios WHERE username = ? AND password = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM usuario WHERE username = ? AND password = ?");
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                request.getRequestDispatcher("/bienvenido.html").forward(request, response);
+                request.getRequestDispatcher("/bienvenido.jsp").forward(request, response);
             } else {
                 request.setAttribute("errorMessage", "Invalid credentials");
-                request.getRequestDispatcher("/login.html").forward(request, response);
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
 
         } catch (SQLException e) {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bienvenido a la EvaluaciÃ³n NÂ°2</title>
+    <title>Bienvenido a la Evaluación N°2</title>
 </head>
 <body>
     <h1>Bienvenido, ${username}!</h1>

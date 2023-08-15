@@ -7,6 +7,7 @@
     <!-- Servlet Mapping -->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
+        <!-- <servlet-class>webApp.webApp.servlets.LoginServlet</servlet-class> -->
         <servlet-class>com.automPbas.webApp.LoginServlet</servlet-class>
     </servlet>
 
@@ -17,7 +18,7 @@
 
     <!-- Welcome File -->
     <welcome-file-list>
-        <welcome-file>bienvenido.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>
