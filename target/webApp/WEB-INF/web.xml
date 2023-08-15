@@ -17,7 +17,7 @@
 
     <!-- Welcome File -->
     <welcome-file-list>
-        <welcome-file>welcome.html</welcome-file>
+        <welcome-file>bienvenido.html</welcome-file>
     </welcome-file-list>
 
 </web-app>
